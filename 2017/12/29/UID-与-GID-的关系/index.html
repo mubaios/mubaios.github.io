@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>对Linux新手非常有用的20个命令 | Mubai的博客</title>
+  <title>UID 与 GID 的关系 | Mubai的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="对于一个新手，总是担心该如何记住 Liunx 那些命令，来帮助自己完成所有任务。毫无疑问，感谢Google搜索，技术书籍，在线文档，Man pages以及各个社区帮了我一个大忙，所以我摘抄了一份记录了如何简单学习和理解命令的秘籍。">
+  <meta name="description" content="事实上，在 Liunx 下每个用户（UID）都至少属于一个组（GID）。">
 <meta name="keywords" content="Liunx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对Linux新手非常有用的20个命令">
-<meta property="og:url" content="http://yoursite.com/2017/12/27/对Linux新手非常有用的20个命令/index.html">
+<meta property="og:title" content="UID 与 GID 的关系">
+<meta property="og:url" content="http://yoursite.com/2017/12/29/UID-与-GID-的关系/index.html">
 <meta property="og:site_name" content="Mubai的博客">
-<meta property="og:description" content="对于一个新手，总是担心该如何记住 Liunx 那些命令，来帮助自己完成所有任务。毫无疑问，感谢Google搜索，技术书籍，在线文档，Man pages以及各个社区帮了我一个大忙，所以我摘抄了一份记录了如何简单学习和理解命令的秘籍。">
+<meta property="og:description" content="事实上，在 Liunx 下每个用户（UID）都至少属于一个组（GID）。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-29T00:57:58.409Z">
+<meta property="og:updated_time" content="2017-12-29T01:41:39.459Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="对Linux新手非常有用的20个命令">
-<meta name="twitter:description" content="对于一个新手，总是担心该如何记住 Liunx 那些命令，来帮助自己完成所有任务。毫无疑问，感谢Google搜索，技术书籍，在线文档，Man pages以及各个社区帮了我一个大忙，所以我摘抄了一份记录了如何简单学习和理解命令的秘籍。">
+<meta name="twitter:title" content="UID 与 GID 的关系">
+<meta name="twitter:description" content="事实上，在 Liunx 下每个用户（UID）都至少属于一个组（GID）。">
   
     <link rel="alternative" href="/atom.xml" title="Mubai的博客" type="application/atom+xml">
   
@@ -161,20 +161,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-对Linux新手非常有用的20个命令" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-UID-与-GID-的关系" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      对Linux新手非常有用的20个命令
+      UID 与 GID 的关系
     </h1>
   
 
         
-        <a href="/2017/12/27/对Linux新手非常有用的20个命令/" class="archive-article-date">
-  	<time datetime="2017-12-27T01:52:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-27</time>
+        <a href="/2017/12/29/UID-与-GID-的关系/" class="archive-article-date">
+  	<time datetime="2017-12-29T01:36:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-29</time>
 </a>
         
       </header>
@@ -182,45 +182,16 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>对于一个新手，总是担心该如何记住 Liunx 那些命令，来帮助自己完成所有任务。毫无疑问，感谢Google搜索，技术书籍，在线文档，Man pages以及各个社区帮了我一个大忙，所以我摘抄了一份记录了如何简单学习和理解命令的秘籍。</p>
+<p><strong>事实上，在 Liunx 下每个用户（UID）都至少属于一个组（GID）。</strong><br><a id="more"></a></p>
 </blockquote>
-<a id="more"></a>
-<h3 id="1-ls-命令"><a href="#1-ls-命令" class="headerlink" title="1.ls 命令"></a>1.ls 命令</h3><p><strong><code>ls</code>命令是列出目录内容(List Directory Contents)的意思,运行它就是列出文件夹里的内容。</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mubaios@liunx:~# ls</span><br><span class="line"> </span><br><span class="line">Android-Games                     Music</span><br><span class="line">Pictures                          Public</span><br><span class="line">Desktop                           Tecmint.com</span><br><span class="line">Documents                         TecMint-Sync</span><br><span class="line">Downloads                         Templates</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">:~# ls -l</span><br><span class="line">total 40588drwxrwxr-x 2 ravisaive ravisaive     4096 May  8 01:06 Android Games</span><br><span class="line">drwxr-xr-x 2 ravisaive ravisaive     4096 May 15 10:50 Desktop</span><br><span class="line">drwxr-xr-x 2 ravisaive ravisaive     4096 May 16 16:45 Documents</span><br><span class="line">drwxr-xr-x 6 ravisaive ravisaive     4096 May 16 14:34 Downloads</span><br><span class="line">drwxr-xr-x 2 ravisaive ravisaive     4096 Apr 30 20:50 Music</span><br><span class="line">drwxr-xr-x 2 ravisaive ravisaive     4096 May  9 17:54 Pictures</span><br><span class="line">drwxrwxr-x 5 ravisaive ravisaive     4096 May  3 18:44 Tecmint.com</span><br><span class="line">drwxr-xr-x 2 ravisaive ravisaive     4096 Apr 30 20:50 Templates</span><br><span class="line"></span><br><span class="line"># 文件类型： -表示文件，d表示目录，l软链接文件</span><br><span class="line"># rwxr-xr-x 是文件或者目录对 所属用户|所属组|其它人 的权限</span><br><span class="line"># 第一个ravisaive代表了文件文件属于用户ravisaive</span><br><span class="line"># 第二个ravisaive代表了文件文件属于用户组ravisaive</span><br><span class="line"># 4096 代表了文件大小为4096字节</span><br><span class="line"># May 8 01:06 代表了文件最后一次修改的日期和时间</span><br></pre></td></tr></table></figure>
-<p><strong><code>ls -a</code>命令会列出文件夹里的所有内容，包括以”.”开头的隐藏文件。</strong></p>
-<h3 id="2-lsblk命令"><a href="#2-lsblk命令" class="headerlink" title="2.lsblk命令"></a>2.lsblk命令</h3><p><strong><code>lsblk</code>就是列出块设备。除了RAM外，以标准的树状输出格式，整齐地显示块设备。</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">:~# lsblk</span><br><span class="line">NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT</span><br><span class="line">sda      8:0    0 232.9G  0 disk </span><br><span class="line">├─sda1   8:1    0  46.6G  0 part /</span><br><span class="line">├─sda2   8:2    0     1K  0 part </span><br><span class="line">├─sda5   8:5    0   190M  0 part /boot</span><br><span class="line">├─sda6   8:6    0   3.7G  0 part [SWAP]</span><br><span class="line">├─sda7   8:7    0  93.1G  0 part /data</span><br><span class="line">└─sda8   8:8    0  89.2G  0 part /personal</span><br><span class="line">sr0     11:0    1  1024M  0 rom</span><br></pre></td></tr></table></figure></p>
-<p><strong><code>lsblk -l</code>命令以列表格式显示块设备(而不是树状格式)。</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">:~# lsblk -l</span><br><span class="line">NAME MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT</span><br><span class="line">sda    8:0    0 232.9G  0 disk </span><br><span class="line">sda1   8:1    0  46.6G  0 part /</span><br><span class="line">sda2   8:2    0     1K  0 part </span><br><span class="line">sda5   8:5    0   190M  0 part /boot</span><br><span class="line">sda6   8:6    0   3.7G  0 part [SWAP]</span><br><span class="line">sda7   8:7    0  93.1G  0 part /data</span><br><span class="line">sda8   8:8    0  89.2G  0 part /personal</span><br><span class="line">sr0   11:0    1  1024M  0 rom</span><br></pre></td></tr></table></figure></p>
+<h3 id="什么是-UID"><a href="#什么是-UID" class="headerlink" title="什么是 UID"></a>什么是 UID</h3><p>事实上，Liunx 系统采用一个32位的整数记录和区分不同的用户，这意味着系统可以记录多达40亿个不同的用户。<strong>这个用来区分不同用户的数字被称为 User ID，简称 UID。</strong>系统会自动记录“用户名”和 UID 的对应。</p>
+<h3 id="什么是-GID"><a href="#什么是-GID" class="headerlink" title="什么是 GID"></a>什么是 GID</h3><p>在 Liunx 系统中除了有用户之外，还有“用户组”的概念，不同的用户组同样也是用数字来区分的，<strong>这种用于区分不同用户组的 ID 被称为 Group ID，简称 GID。</strong></p>
+<h3 id="Liunx-系统中的用户分类"><a href="#Liunx-系统中的用户分类" class="headerlink" title="Liunx 系统中的用户分类"></a>Liunx 系统中的用户分类</h3><p><strong>Liunx 系统中的用户分为3类，即普通用户、根用户、系统用户。</strong><br><br>普通用户是指所有使用 Liunx 系统的真实用户，通常普通用户的 UID 系统默认从500开始编号。根用户也就是 root 用户，它的 ID 是0，也被称为超级用户，root 账户拥有对系统的安全控制权。系统用户是指系统运行时必须有的用户，但并不是指真是的使用者，比如在 CentOS 下运行网站服务时，需要使用系统用户 apache 来运行 httpd 进程，而运行 MySQL数据库服务时，需要使用系统用户 mysql 来运行 mysqld 进程。在 CentOS 下，系统用户的 ID 范围是1~499。</p>
+<h3 id="UID-和-GID-有什么联系"><a href="#UID-和-GID-有什么联系" class="headerlink" title="UID 和 GID 有什么联系"></a>UID 和 GID 有什么联系</h3><p>事实上，在 Liunx 下每个用户（UID）都至少属于一个组（GID）。</p>
 <blockquote>
-<p>lsblk是最有用和最简单的方式来了解新插入的USB设备的名字，特别是当你在终端上处理磁盘/块设备时。</p>
+<p><strong>举个例子：</strong><br>每个学生在学校使用学号来作为表示，而每个学生又都属于某一个班级，这里的学号就相当于 UID，而班级就相当于 GID。当然啦，每个学生可能还会同时参加一些兴趣班，而每个兴趣班也是不同的组。也就是说，每个学生至少属于一个组，也可以同时属于多个组。</p>
 </blockquote>
-<h3 id="3-md5sum命令"><a href="#3-md5sum命令" class="headerlink" title="3.md5sum命令"></a>3.md5sum命令</h3><p><strong><code>md5sum</code>就是计算和检验MD5信息签名。md5 checksum(通常叫做哈希)使用匹配或者验证文件的完整性，因为文件可能因为传输错误，磁盘错误或者无恶意的干扰等原因而发生改变。</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:~# md5sum teamviewer_linux.deb 47790ed345a7b7970fc1f2ac50c97002  teamviewer_linux.deb</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注意：用户可以使用官方提供的和md5sum生成签名信息匹对以此检测文件是否改变,Md5sum没有sha1sum安全.</p>
-</blockquote>
-<h3 id="4-dd命令"><a href="#4-dd命令" class="headerlink" title="4.dd命令"></a>4.dd命令</h3><p><code>dd</code>命令代表了转换和赋值文件，可以用来转换和复制文件。</p>
-<h3 id="5-uname命令"><a href="#5-uname命令" class="headerlink" title="5.uname命令"></a>5.uname命令</h3><p><code>uname</code>命令就是 Unix Name的简写，显示计算机名、操作系统和内核的详细信息</p>
-<h3 id="6-history命令"><a href="#6-history命令" class="headerlink" title="6.history命令"></a>6.history命令</h3><p>用于查看历史记录</p>
-<h3 id="7-sudo命令"><a href="#7-sudo命令" class="headerlink" title="7.sudo命令"></a>7.sudo命令</h3><p><code>sudo</code>（Super user do)命令允许授权用户执行超级用户或者其他用户的命令。其实并不建议使用 sudo 或 su 来处理日常用途，因为他可能导致严重的错误，如果你意外的做错了事，后果很严重。</p>
-<h3 id="8-mkdir命令"><a href="#8-mkdir命令" class="headerlink" title="8.mkdir命令"></a>8.mkdir命令</h3><p>在命令路径下创建新的目录。如果目录已存在，会返回一个错误信息‘不能创建文件夹，文件夹已经存在了’（cannot create folder,folder already exists)</p>
-<h3 id="9-touch命令"><a href="#9-touch命令" class="headerlink" title="9.touch命令"></a>9.touch命令</h3><p>将文件的访问和修改时间更新为当前时间，touch 命令只会在文件不存在的时候才会创建它。如果文件已经存在了，它会更新时间戳，但是并不会改变文件的内容。</p>
-<h3 id="10-chmod命令"><a href="#10-chmod命令" class="headerlink" title="10.chmod命令"></a>10.chmod命令</h3><p>改变文件的模式位</p>
-<h3 id="11-chown命令"><a href="#11-chown命令" class="headerlink" title="11.chown命令"></a>11.chown命令</h3><p>改变文件拥有者和所在用户组</p>
-<h3 id="12-apt命令"><a href="#12-apt命令" class="headerlink" title="12.apt命令"></a>12.apt命令</h3><p>APT是一个为Debian系列系统（Ubuntu，Kubuntu等等）开发的高级包管理器，在Gnu/Linux系统上，它会为包自动地，智能地搜索，安装，升级以及解决依赖。</p>
-<h3 id="13-tar命令"><a href="#13-tar命令" class="headerlink" title="13.tar命令"></a>13.tar命令</h3><p><code>tar</code>命令是磁带归档(Tape Archive)，对创建一些文件的的归档和它们的解压很有用。</p>
-<h3 id="14-cal命令"><a href="#14-cal命令" class="headerlink" title="14.cal命令"></a>14.cal命令</h3><p>用来显示当前月份或者未来、过去任何年费中的月份。</p>
-<h3 id="15-date命令"><a href="#15-date命令" class="headerlink" title="15.date命令"></a>15.date命令</h3><p><code>date</code>命令使用标准的输出打印当前的日期和时间，也可以深入设置。</p>
-<h3 id="16-cat命令"><a href="#16-cat命令" class="headerlink" title="16.cat命令"></a>16.cat命令</h3><p><code>cat</code>代表了连结（Concatenation），连接两个或者更多文本文件或者以标准输出形式打印文件的内容。</p>
-<h3 id="17-cp命令"><a href="#17-cp命令" class="headerlink" title="17.cp命令"></a>17.cp命令</h3><p>复制命令，在shell脚本中是最常用的一个命令，而且它可以使用通配符（在前面一块中有所描述），来定制所需的文件的复制。</p>
-<h3 id="18-mv命令"><a href="#18-mv命令" class="headerlink" title="18.mv命令"></a>18.mv命令</h3><p>移动命令，mv命令可以使用通配符。mv需谨慎使用，因为移动系统的或者未授权的文件不但会导致安全性问题，而且可能系统崩溃。 </p>
-<h3 id="19-pwd命令"><a href="#19-pwd命令" class="headerlink" title="19.pwd命令"></a>19.pwd命令</h3><p>在终端中显示当前工作目录的全路径，这个命令并不会在脚本中经常使用，但是对于新手，当从连接到nux很久后在终端中迷失了路径，这绝对是救命稻草。</p>
-<h3 id="20-cd命令"><a href="#20-cd命令" class="headerlink" title="20.cd命令"></a>20.cd命令</h3><p>在终端中切换目录时，cd就大显身手了。“cd ～”会改变工作目录为用户的家目录，而且当用户发现自己在终端中迷失了路径时，非常有用。“cd ..”从当前工作目录切换到(当前工作目录的)父目录。</p>
-<hr>
-<blockquote>
-<p>本文参考选自：<a href="http://mp.weixin.qq.com/s/KMiBU5B0kbcphZMmeMOqiA" target="_blank" rel="noopener">对Linux新手非常有用的20个命令</a></p>
-</blockquote>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">id     # 确认自己的 UID</span><br><span class="line">groups # 确认自己所属的用户组</span><br><span class="line">who    # 查询当前在线用户</span><br></pre></td></tr></table></figure>
       
 
       
@@ -320,7 +291,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/12/27/对Linux新手非常有用的20个命令/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/12/29/UID-与-GID-的关系/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -334,18 +305,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/12/29/UID-与-GID-的关系/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/12/29/Liunx-账户管理命令/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          UID 与 GID 的关系
+          Liunx账户管理命令
         
       </div>
     </a>
   
   
-    <a href="/2017/12/26/选你所用的Linux版本/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">选你所用的Linux版本</div>
+    <a href="/2017/12/27/对Linux新手非常有用的20个命令/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">对Linux新手非常有用的20个命令</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -372,7 +343,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-ls-命令"><span class="toc-number">1.</span> <span class="toc-text"><a href="#1-ls-&#x547D;&#x4EE4;" class="headerlink" title="1.ls &#x547D;&#x4EE4;"></a>1.ls &#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-lsblk命令"><span class="toc-number">2.</span> <span class="toc-text"><a href="#2-lsblk&#x547D;&#x4EE4;" class="headerlink" title="2.lsblk&#x547D;&#x4EE4;"></a>2.lsblk&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-md5sum命令"><span class="toc-number">3.</span> <span class="toc-text"><a href="#3-md5sum&#x547D;&#x4EE4;" class="headerlink" title="3.md5sum&#x547D;&#x4EE4;"></a>3.md5sum&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-dd命令"><span class="toc-number">4.</span> <span class="toc-text"><a href="#4-dd&#x547D;&#x4EE4;" class="headerlink" title="4.dd&#x547D;&#x4EE4;"></a>4.dd&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-uname命令"><span class="toc-number">5.</span> <span class="toc-text"><a href="#5-uname&#x547D;&#x4EE4;" class="headerlink" title="5.uname&#x547D;&#x4EE4;"></a>5.uname&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-history命令"><span class="toc-number">6.</span> <span class="toc-text"><a href="#6-history&#x547D;&#x4EE4;" class="headerlink" title="6.history&#x547D;&#x4EE4;"></a>6.history&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-sudo命令"><span class="toc-number">7.</span> <span class="toc-text"><a href="#7-sudo&#x547D;&#x4EE4;" class="headerlink" title="7.sudo&#x547D;&#x4EE4;"></a>7.sudo&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-mkdir命令"><span class="toc-number">8.</span> <span class="toc-text"><a href="#8-mkdir&#x547D;&#x4EE4;" class="headerlink" title="8.mkdir&#x547D;&#x4EE4;"></a>8.mkdir&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-touch命令"><span class="toc-number">9.</span> <span class="toc-text"><a href="#9-touch&#x547D;&#x4EE4;" class="headerlink" title="9.touch&#x547D;&#x4EE4;"></a>9.touch&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-chmod命令"><span class="toc-number">10.</span> <span class="toc-text"><a href="#10-chmod&#x547D;&#x4EE4;" class="headerlink" title="10.chmod&#x547D;&#x4EE4;"></a>10.chmod&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-chown命令"><span class="toc-number">11.</span> <span class="toc-text"><a href="#11-chown&#x547D;&#x4EE4;" class="headerlink" title="11.chown&#x547D;&#x4EE4;"></a>11.chown&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-apt命令"><span class="toc-number">12.</span> <span class="toc-text"><a href="#12-apt&#x547D;&#x4EE4;" class="headerlink" title="12.apt&#x547D;&#x4EE4;"></a>12.apt&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-tar命令"><span class="toc-number">13.</span> <span class="toc-text"><a href="#13-tar&#x547D;&#x4EE4;" class="headerlink" title="13.tar&#x547D;&#x4EE4;"></a>13.tar&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-cal命令"><span class="toc-number">14.</span> <span class="toc-text"><a href="#14-cal&#x547D;&#x4EE4;" class="headerlink" title="14.cal&#x547D;&#x4EE4;"></a>14.cal&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-date命令"><span class="toc-number">15.</span> <span class="toc-text"><a href="#15-date&#x547D;&#x4EE4;" class="headerlink" title="15.date&#x547D;&#x4EE4;"></a>15.date&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-cat命令"><span class="toc-number">16.</span> <span class="toc-text"><a href="#16-cat&#x547D;&#x4EE4;" class="headerlink" title="16.cat&#x547D;&#x4EE4;"></a>16.cat&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-cp命令"><span class="toc-number">17.</span> <span class="toc-text"><a href="#17-cp&#x547D;&#x4EE4;" class="headerlink" title="17.cp&#x547D;&#x4EE4;"></a>17.cp&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18-mv命令"><span class="toc-number">18.</span> <span class="toc-text"><a href="#18-mv&#x547D;&#x4EE4;" class="headerlink" title="18.mv&#x547D;&#x4EE4;"></a>18.mv&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19-pwd命令"><span class="toc-number">19.</span> <span class="toc-text"><a href="#19-pwd&#x547D;&#x4EE4;" class="headerlink" title="19.pwd&#x547D;&#x4EE4;"></a>19.pwd&#x547D;&#x4EE4;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20-cd命令"><span class="toc-number">20.</span> <span class="toc-text"><a href="#20-cd&#x547D;&#x4EE4;" class="headerlink" title="20.cd&#x547D;&#x4EE4;"></a>20.cd&#x547D;&#x4EE4;</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是-UID"><span class="toc-number">1.</span> <span class="toc-text"><a href="#&#x4EC0;&#x4E48;&#x662F;-UID" class="headerlink" title="&#x4EC0;&#x4E48;&#x662F; UID"></a>&#x4EC0;&#x4E48;&#x662F; UID</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是-GID"><span class="toc-number">2.</span> <span class="toc-text"><a href="#&#x4EC0;&#x4E48;&#x662F;-GID" class="headerlink" title="&#x4EC0;&#x4E48;&#x662F; GID"></a>&#x4EC0;&#x4E48;&#x662F; GID</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Liunx-系统中的用户分类"><span class="toc-number">3.</span> <span class="toc-text"><a href="#Liunx-&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x7528;&#x6237;&#x5206;&#x7C7B;" class="headerlink" title="Liunx &#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x7528;&#x6237;&#x5206;&#x7C7B;"></a>Liunx &#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x7528;&#x6237;&#x5206;&#x7C7B;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UID-和-GID-有什么联系"><span class="toc-number">4.</span> <span class="toc-text"><a href="#UID-&#x548C;-GID-&#x6709;&#x4EC0;&#x4E48;&#x8054;&#x7CFB;" class="headerlink" title="UID &#x548C; GID &#x6709;&#x4EC0;&#x4E48;&#x8054;&#x7CFB;"></a>UID &#x548C; GID &#x6709;&#x4EC0;&#x4E48;&#x8054;&#x7CFB;</span></a></li></ol>
                     </div>
                 </span>
             </div>
