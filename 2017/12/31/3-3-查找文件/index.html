@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Liunx目录的相关操作 | Mubai的博客</title>
+  <title>3.3 查找文件 | Mubai的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文是我总结的关于 Liunx下目录相关操作的方法">
+  <meta name="description" content="我们可以通过一些查找命令在Liunx中查找需要的文件。">
 <meta name="keywords" content="Liunx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Liunx目录的相关操作">
-<meta property="og:url" content="http://yoursite.com/2017/12/29/Liunx目录的相关操作/index.html">
+<meta property="og:title" content="3.3 查找文件">
+<meta property="og:url" content="http://yoursite.com/2017/12/31/3-3-查找文件/index.html">
 <meta property="og:site_name" content="Mubai的博客">
-<meta property="og:description" content="本文是我总结的关于 Liunx下目录相关操作的方法">
+<meta property="og:description" content="我们可以通过一些查找命令在Liunx中查找需要的文件。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-29T07:23:38.646Z">
+<meta property="og:updated_time" content="2017-12-31T08:09:00.105Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Liunx目录的相关操作">
-<meta name="twitter:description" content="本文是我总结的关于 Liunx下目录相关操作的方法">
+<meta name="twitter:title" content="3.3 查找文件">
+<meta name="twitter:description" content="我们可以通过一些查找命令在Liunx中查找需要的文件。">
   
     <link rel="alternative" href="/atom.xml" title="Mubai的博客" type="application/atom+xml">
   
@@ -161,20 +161,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Liunx目录的相关操作" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-3-3-查找文件" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Liunx目录的相关操作
+      3.3 查找文件
     </h1>
   
 
         
-        <a href="/2017/12/29/Liunx目录的相关操作/" class="archive-article-date">
-  	<time datetime="2017-12-29T07:23:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-29</time>
+        <a href="/2017/12/31/3-3-查找文件/" class="archive-article-date">
+  	<time datetime="2017-12-31T08:08:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-31</time>
 </a>
         
       </header>
@@ -182,10 +182,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>本文是我总结的关于 Liunx下目录相关操作的方法</p>
+<p>我们可以通过一些查找命令在Liunx中查找需要的文件。</p>
 </blockquote>
 <a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1.进入目录：cd</span><br><span class="line">cd python/ # 查看 python 目录</span><br><span class="line">pwd # 显示当前所处的目录</span><br><span class="line"></span><br><span class="line">2.创建目录：mkdir</span><br><span class="line">mkdir aaa # 创建目录 aaa</span><br><span class="line">mkdir -p aaa/bbb/ccc # 递归创建多层级的目录</span><br><span class="line"></span><br><span class="line">3.删除目录：rmdir 和 rm</span><br><span class="line">rmdir aaa # rm 只能删除空目录</span><br><span class="line">rm -r aaa # 删除非空目录</span><br><span class="line">rm -rf aaa # 无提示的一次性永久删除某目录及内容，慎重使用</span><br></pre></td></tr></table></figure>
+<h3 id="3-3-1-一般查找：find"><a href="#3-3-1-一般查找：find" class="headerlink" title="3.3.1 一般查找：find"></a>3.3.1 一般查找：find</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">find PATH -name FILENAME</span><br><span class="line">例如：</span><br><span class="line">find / -name httdp* 或者 find / -name *.conf</span><br></pre></td></tr></table></figure>
+<h3 id="3-3-2-数据库查找：locate"><a href="#3-3-2-数据库查找：locate" class="headerlink" title="3.3.2 数据库查找：locate"></a>3.3.2 数据库查找：locate</h3><blockquote>
+<p>locate 命令依赖于一个数据库文件，Liunx 系统默认每天会检索一下系统中的所有文件，然后将检索到的文件记录到数据库中。在运行 locate 命令的时候可直接到数据库中查找记录并打印到屏幕上，所以使用 locate 命令要比 find 命令反馈更为迅速。<br><br><strong>一般在执行 locate 命令之前一般需要执行 updatedb 命令，便于及时更新数据库记录。</strong></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">updatedb</span><br><span class="line">locate test.txt</span><br></pre></td></tr></table></figure>
+<h3 id="3-3-3-查找执行文件：which-whereis"><a href="#3-3-3-查找执行文件：which-whereis" class="headerlink" title="3.3.3 查找执行文件：which/whereis"></a>3.3.3 查找执行文件：which/whereis</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">which passwd # 查找在系统中的绝对路径</span><br><span class="line">whereis passwd # 不但能找出其二进制文件，还能找出相关的man文件</span><br></pre></td></tr></table></figure>
       
 
       
@@ -285,7 +290,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/12/29/Liunx目录的相关操作/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/12/31/3-3-查找文件/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -299,18 +304,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/12/31/3-2-文件和目录的权限/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/01/02/投资房产指南/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          3.2 文件和目录的权限
+          投资房产指南
         
       </div>
     </a>
   
   
-    <a href="/2017/12/29/Liunx-文件管理：文件的相关操作/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Liunx文件管理：文件的相关操作</div>
+    <a href="/2017/12/31/3-2-文件和目录的权限/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">3.2 文件和目录的权限</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -337,7 +342,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-1-一般查找：find"><span class="toc-number">1.</span> <span class="toc-text"><a href="#3-3-1-&#x4E00;&#x822C;&#x67E5;&#x627E;&#xFF1A;find" class="headerlink" title="3.3.1 &#x4E00;&#x822C;&#x67E5;&#x627E;&#xFF1A;find"></a>3.3.1 &#x4E00;&#x822C;&#x67E5;&#x627E;&#xFF1A;find</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-2-数据库查找：locate"><span class="toc-number">2.</span> <span class="toc-text"><a href="#3-3-2-&#x6570;&#x636E;&#x5E93;&#x67E5;&#x627E;&#xFF1A;locate" class="headerlink" title="3.3.2 &#x6570;&#x636E;&#x5E93;&#x67E5;&#x627E;&#xFF1A;locate"></a>3.3.2 &#x6570;&#x636E;&#x5E93;&#x67E5;&#x627E;&#xFF1A;locate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-3-查找执行文件：which-whereis"><span class="toc-number">3.</span> <span class="toc-text"><a href="#3-3-3-&#x67E5;&#x627E;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF1A;which-whereis" class="headerlink" title="3.3.3 &#x67E5;&#x627E;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF1A;which/whereis"></a>3.3.3 &#x67E5;&#x627E;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF1A;which/whereis</span></a></li></ol>
                     </div>
                 </span>
             </div>
