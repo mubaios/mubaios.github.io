@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>3.3 查找文件 | Mubai的博客</title>
+  <title>Linux面试宝典笔试题【1】 | Mubai的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我们可以通过一些查找命令在Liunx中查找需要的文件。">
+  <meta name="description" content="通过面试题，测试自己的不足。">
 <meta name="keywords" content="Liunx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="3.3 查找文件">
-<meta property="og:url" content="http://yoursite.com/2017/12/31/3-3-查找文件/index.html">
+<meta property="og:title" content="Linux面试宝典笔试题【1】">
+<meta property="og:url" content="http://yoursite.com/2018/01/12/Linux面试宝典笔试题【1】/index.html">
 <meta property="og:site_name" content="Mubai的博客">
-<meta property="og:description" content="我们可以通过一些查找命令在Liunx中查找需要的文件。">
+<meta property="og:description" content="通过面试题，测试自己的不足。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-31T08:09:00.105Z">
+<meta property="og:updated_time" content="2018-01-12T14:35:21.108Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="3.3 查找文件">
-<meta name="twitter:description" content="我们可以通过一些查找命令在Liunx中查找需要的文件。">
+<meta name="twitter:title" content="Linux面试宝典笔试题【1】">
+<meta name="twitter:description" content="通过面试题，测试自己的不足。">
   
     <link rel="alternative" href="/atom.xml" title="Mubai的博客" type="application/atom+xml">
   
@@ -161,20 +161,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-3-3-查找文件" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Linux面试宝典笔试题【1】" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      3.3 查找文件
+      Linux面试宝典笔试题【1】
     </h1>
   
 
         
-        <a href="/2017/12/31/3-3-查找文件/" class="archive-article-date">
-  	<time datetime="2017-12-31T08:08:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-31</time>
+        <a href="/2018/01/12/Linux面试宝典笔试题【1】/" class="archive-article-date">
+  	<time datetime="2018-01-12T14:33:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-12</time>
 </a>
         
       </header>
@@ -182,15 +182,37 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>我们可以通过一些查找命令在Liunx中查找需要的文件。</p>
+<p>通过面试题，测试自己的不足。</p>
 </blockquote>
 <a id="more"></a>
-<h3 id="3-3-1-一般查找：find"><a href="#3-3-1-一般查找：find" class="headerlink" title="3.3.1 一般查找：find"></a>3.3.1 一般查找：find</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">find PATH -name FILENAME</span><br><span class="line">例如：</span><br><span class="line">find / -name httdp* 或者 find / -name *.conf</span><br></pre></td></tr></table></figure>
-<h3 id="3-3-2-数据库查找：locate"><a href="#3-3-2-数据库查找：locate" class="headerlink" title="3.3.2 数据库查找：locate"></a>3.3.2 数据库查找：locate</h3><blockquote>
-<p>locate 命令依赖于一个数据库文件，Liunx 系统默认每天会检索一下系统中的所有文件，然后将检索到的文件记录到数据库中。在运行 locate 命令的时候可直接到数据库中查找记录并打印到屏幕上，所以使用 locate 命令要比 find 命令反馈更为迅速。<br><br><strong>一般在执行 locate 命令之前一般需要执行 updatedb 命令，便于及时更新数据库记录。</strong></p>
+<h3 id="一、选择题"><a href="#一、选择题" class="headerlink" title="一、选择题"></a>一、选择题</h3><ol>
+<li><p>Linux系统中DNS服务进程名为（ A ）<br>A．named  B.httpd  C.ftpd  D.SysLog</p>
+<blockquote>
+<p><strong>科普：Liunx 下常用的 DNS 服务软件是 BIND，BIND 服务器的服务程序脚本名称是 named，默认没有启动，需手动设置。</strong></p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">updatedb</span><br><span class="line">locate test.txt</span><br></pre></td></tr></table></figure>
-<h3 id="3-3-3-查找执行文件：which-whereis"><a href="#3-3-3-查找执行文件：which-whereis" class="headerlink" title="3.3.3 查找执行文件：which/whereis"></a>3.3.3 查找执行文件：which/whereis</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">which passwd # 查找在系统中的绝对路径</span><br><span class="line">whereis passwd # 不但能找出其二进制文件，还能找出相关的man文件</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在UINX/Linux中，系统Root用户口令信息一半保存的文件夹是（ D ）<br>A．autobat  B.service.conf  C.inetd.conf  D.shadow</p>
+<blockquote>
+<p><strong>科普：在 Unix 早期是没有/etc/shadow 这个文件的，一个用户的所有信息都只是保存在/etc/passwd 文件中，加密后的用户密码保存在了 passwd 文件的第二个字段中。</strong></p>
+</blockquote>
+</li>
+<li><p>在下列选项中，属于Linux系统日志服务的是（ D ）<br>A．named  B.httpd  C.ftpd  D.SysLog</p>
+<blockquote>
+<p><strong>科普：在 Unix 类操作系统上，SysLog 广泛应用于系统日志。SysLog 日志消息既可以记录在本地文件中，也可以通过网络发送到接收SysLog的服务器。</strong></p>
+</blockquote>
+</li>
+<li><p>Linux操作系统支持的文件系统类型是（ A ）<br>A、EX3  B.NFT  C.TXT  D.FAT</p>
+<blockquote>
+<p><strong>科普：ext3相比 ext2有4大优势：可利用性、数据完整性、速度及易于转换。ext3有日志功能，这对系统的修复，文件系统的恢复有好处。</strong></p>
+</blockquote>
+</li>
+<li><p>在UINX系统中输入命令“ls –al test”显示如下”-rwx–xr-x 1 root root 100 2013-12-20 23:51 test”对它的含义解释错误的是（ D ）<br>A．这是一个文件，而不是目录<br>B．文件的拥有者可以对这个文件进行读、写和执行的操作<br>C．文件所有者可以读它，也可以执行它<br>D、其他所有用户只可以执行它</p>
+<blockquote>
+<p>注释：其他所有用户不止可以执行（x），还可以读取（r）它。</p>
+</blockquote>
+</li>
+</ol>
+
       
 
       
@@ -290,7 +312,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/12/31/3-3-查找文件/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/01/12/Linux面试宝典笔试题【1】/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -304,18 +326,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/01/02/投资房产指南/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          投资房产指南
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/12/31/3-2-文件和目录的权限/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">3.2 文件和目录的权限</div>
+    <a href="/2018/01/11/用区块链技术给人生定价/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">用区块链技术给人生定价</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -342,7 +355,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-1-一般查找：find"><span class="toc-number">1.</span> <span class="toc-text"><a href="#3-3-1-&#x4E00;&#x822C;&#x67E5;&#x627E;&#xFF1A;find" class="headerlink" title="3.3.1 &#x4E00;&#x822C;&#x67E5;&#x627E;&#xFF1A;find"></a>3.3.1 &#x4E00;&#x822C;&#x67E5;&#x627E;&#xFF1A;find</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-2-数据库查找：locate"><span class="toc-number">2.</span> <span class="toc-text"><a href="#3-3-2-&#x6570;&#x636E;&#x5E93;&#x67E5;&#x627E;&#xFF1A;locate" class="headerlink" title="3.3.2 &#x6570;&#x636E;&#x5E93;&#x67E5;&#x627E;&#xFF1A;locate"></a>3.3.2 &#x6570;&#x636E;&#x5E93;&#x67E5;&#x627E;&#xFF1A;locate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-3-查找执行文件：which-whereis"><span class="toc-number">3.</span> <span class="toc-text"><a href="#3-3-3-&#x67E5;&#x627E;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF1A;which-whereis" class="headerlink" title="3.3.3 &#x67E5;&#x627E;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF1A;which/whereis"></a>3.3.3 &#x67E5;&#x627E;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF1A;which/whereis</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、选择题"><span class="toc-number">1.</span> <span class="toc-text"><a href="#&#x4E00;&#x3001;&#x9009;&#x62E9;&#x9898;" class="headerlink" title="&#x4E00;&#x3001;&#x9009;&#x62E9;&#x9898;"></a>&#x4E00;&#x3001;&#x9009;&#x62E9;&#x9898;</span></a></li></ol>
                     </div>
                 </span>
             </div>
